@@ -1,18 +1,21 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <h1 v-changeCholor="'blue'">hhhhhhhhhhhhhhhhhhhhhhh</h1>
+    <div v-for="user in users" :key="user.id">
+      <h1>{{ user.name }}</h1>
+      <h2>{{ user.email }}</h2>
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
-
+import stMixin from "@/mixins/stMixin";
 export default {
   name: "HomeView",
-  components: {
-    HelloWorld,
+  data() {
+    return {};
   },
+  mixins: [stMixin],
 };
 </script>
